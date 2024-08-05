@@ -26,6 +26,7 @@ import json
 import random
 import zmq
 from network_gym_env.southbound_interface import *
+import time
 
 class DummySim:
     """A dummy simulator that generate random measurement samples. When the simulation terminates, resume to the env_config.
@@ -60,8 +61,9 @@ class DummySim:
             client_identity (str): the identity of the client socket who started the env
         """
         # open a socket with the same env_identity and connect to the same env_port.
-
-        env_sim = southbound_connect(env_identity, config_json)
+        self.context = zmq.Context()
+        self.context.setsockopt(zmq.LINGER, 10000)
+        env_sim = southbound_connect(env_identity, config_json, self.context)
         print(env_identity + ': env_sim socket connected.')
 
         poller = zmq.Poller()
@@ -106,6 +108,8 @@ class DummySim:
                 break
         poller.unregister(env_sim)
         env_sim.close()
+        self.context.term()
+
         print(env_identity + ': env_sim socket closed.')
     
     def run_one_interval(self):
@@ -141,6 +145,7 @@ class DummySim:
 
         #data_recv_flat = data_recv.explode(column=['user', 'value'])
         #print(data_recv_flat)
+        time.sleep(0.1)
         return merged_list
 
         

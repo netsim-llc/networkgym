@@ -96,15 +96,13 @@ Max instances per client:
 └────────┴────────┴────────────────────────────────┴─────────────┘
 ```
 
-### start environment
+### start ns-3 environment
 In the second terminal type following command to start the ns-3 based environment:
 ```
 python3 start_env_ns3.py
 ```
 The expected output from the first (**server**) terminal should be updated as following:
 ```
-[b'admin-0-intel-Z390-AORUS-ULTRA', b'', b'{\n  "type": "env-hello",\n  "env_list": [\n    
-"nqos_split"\n]\n}']
 ┏━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
 ┃ Worker      ┃ Status ┃ Time since Last Seen (seconds) ┃ Environment    ┃
 ┡━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
@@ -119,9 +117,46 @@ python3 start_client.py
 ```
 A progress bar should be displayed at the third (client) terminal:
 ```
-system_default agent is interacting with NetworkGym's                     
+system_default agent is interacting with NetworkGym's nqos_split env.                     
 ⠴ Progress ━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   5% 0:04:41 env time: 4600/101100 ms   
 ```
+
+## 🎨 Start Python Custom Environment
+First, open 3 terminals (or 3 screen sessions), one per component. Make sure all terminals have activated the virtual environment created in the previous step.
+### start server
+In the first terminal type following command to start the server:
+```
+python3 start_server.py
+```
+
+### start Python custom environment
+In the second terminal type following command to start a custom environment:
+```
+python3 start_custom_env.py
+```
+The expected output from the first (**server**) terminal should be updated as following:
+```
+┏━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Worker      ┃ Status ┃ Time since Last Seen (seconds) ┃ Environment      ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ admin-0-*** │ idle   │ 13.100512027740479             │ ['admin-custom'] │
+└─────────────┴────────┴────────────────────────────────┴──────────────────┘
+```
+
+### start client
+Change the environment variable in [start_client.py](start_client.py): `env_name = "custom"`. In the third terminal, type the following command to start the client:
+```
+python3 start_client.py
+```
+A progress bar should be displayed at the third (client) terminal:
+```
+system_default agent is interacting with NetworkGym's custom env.                    
+⠴ Progress ━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   5% 0:04:41 env time: 4600/101100 ms   
+```
+
+### Substituting the Dummy Simulator
+Once you’ve successfully established a connection between your client and the custom environment, you’re ready to substitute the [network_gym_env/dummy_sim.py](network_gym_env/dummy_sim.py) with your proprietary simulator or testbed.
+
 
 ## 🔧 Client Configuration
 NetworkGym Client includes two configuration files, a common configure file and environement dependent configure file. 
