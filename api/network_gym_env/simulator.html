@@ -309,8 +309,72 @@
 <h1>Dummy Simulator<a class="headerlink" href="#dummy-simulator" title="Permalink to this heading">¶</a></h1>
 <section id="network-gym-env-dummysim">
 <h2>network_gym_env.DummySim<a class="headerlink" href="#network-gym-env-dummysim" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="network_gym_env.DummySim">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">network_gym_env.</span></span><span class="sig-name descname"><span class="pre">DummySim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_identity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_identity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg_json</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/network_gym_env/dummy_sim.html#DummySim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#network_gym_env.DummySim" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dummy simulator that generate random measurement samples. When the simulation terminates, resume to the env_config.</p>
+<p>The simulator will create a new env_sim socket using the env_idenntity and connects to the env_port.
+The simulator is configured using the config_json file.
+The first measurement will be send to the client_identity.</p>
+<p>Initilize dummy simulator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env_identity</strong> (<em>str</em>) – the identity of the environement socket</p></li>
+<li><p><strong>config_json</strong> (<em>json</em>) – env configuration</p></li>
+<li><p><strong>client_identity</strong> (<em>str</em>) – the identity of the client socket who started the env</p></li>
+<li><p><strong>msg_json</strong> (<em>json</em>) – msg from the cliet.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_env.DummySim.generate_dummy_measurement">
+<span class="sig-prename descclassname"><span class="pre">network_gym_env.DummySim.</span></span><span class="sig-name descname"><span class="pre">generate_dummy_measurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_users</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_env.DummySim.generate_dummy_measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate random measurement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – the name of measurement</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – the tags added to the measurement, e.g., timestamps</p></li>
+<li><p><strong>num_users</strong> (<em>int</em>) – the number of users</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>json</strong> – the measurement results</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_env.DummySim.start_simulation">
+<span class="sig-prename descclassname"><span class="pre">network_gym_env.DummySim.</span></span><span class="sig-name descname"><span class="pre">start_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_identity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_identity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_env.DummySim.start_simulation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start simulation. Connect to the server using SouthBound API. Report network stats measurment and receive action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>env_identity</strong> (<em>str</em>) – the identity of the environement socket</p></li>
+<li><p><strong>config_json</strong> (<em>json</em>) – env configuration</p></li>
+<li><p><strong>client_identity</strong> (<em>str</em>) – the identity of the client socket who started the env</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_env.DummySim.run_one_interval">
+<span class="sig-prename descclassname"><span class="pre">network_gym_env.DummySim.</span></span><span class="sig-name descname"><span class="pre">run_one_interval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_env.DummySim.run_one_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Running the simulator for one interval.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>json</strong> – the measurement list</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -375,7 +439,13 @@
             <ul>
 <li><a class="reference internal" href="#">Dummy Simulator</a><ul>
 <li><a class="reference internal" href="#network-gym-env-dummysim">network_gym_env.DummySim</a><ul>
-<li><a class="reference internal" href="#methods">Methods</a></li>
+<li><a class="reference internal" href="#network_gym_env.DummySim"><code class="docutils literal notranslate"><span class="pre">DummySim</span></code></a></li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#network_gym_env.DummySim.generate_dummy_measurement"><code class="docutils literal notranslate"><span class="pre">generate_dummy_measurement()</span></code></a></li>
+<li><a class="reference internal" href="#network_gym_env.DummySim.start_simulation"><code class="docutils literal notranslate"><span class="pre">start_simulation()</span></code></a></li>
+<li><a class="reference internal" href="#network_gym_env.DummySim.run_one_interval"><code class="docutils literal notranslate"><span class="pre">run_one_interval()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

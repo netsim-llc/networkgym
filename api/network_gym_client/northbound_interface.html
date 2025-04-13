@@ -309,11 +309,70 @@
 <h1>NorthBound<a class="headerlink" href="#northbound" title="Permalink to this heading">¶</a></h1>
 <section id="network-gym-client-northbound">
 <h2>network_gym_client.NorthBound<a class="headerlink" href="#network-gym-client-northbound" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="network_gym_client.NorthBoundClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">network_gym_client.</span></span><span class="sig-name descname"><span class="pre">NorthBoundClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_json</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/network_gym_client/northbound_interface.html#NorthBoundClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#network_gym_client.NorthBoundClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>NetworkGym northbound interface client.</p>
+<p>Northbound interface connects the network gym client to the network gym server. Client sends the network policy to the Sever/Env.
+Sever/Env replies the network stats to the Client.</p>
+<p>Initialize NorthBoundClient.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>int</em>) – client ID</p></li>
+<li><p><strong>config_json</strong> (<em>json</em>) – configuration file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <section id="methods">
 <h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_client.NorthBoundClient.connect">
+<span class="sig-prename descclassname"><span class="pre">network_gym_client.NorthBoundClient.</span></span><span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_client.NorthBoundClient.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to the network gym server. Send the Start Env request, where the configuration is loaded from json file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_client.NorthBoundClient.send">
+<span class="sig-prename descclassname"><span class="pre">network_gym_client.NorthBoundClient.</span></span><span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">policy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_client.NorthBoundClient.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send the Policy to the server and environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>policy</strong> (<em>json</em>) – network policy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_client.NorthBoundClient.recv">
+<span class="sig-prename descclassname"><span class="pre">network_gym_client.NorthBoundClient.</span></span><span class="sig-name descname"><span class="pre">recv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_client.NorthBoundClient.recv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a message from the network gym server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pd.DataFrame</strong> – the network stats measurement from the environment</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="additional-methods">
 <h3>Additional Methods<a class="headerlink" href="#additional-methods" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="network_gym_client.NorthBoundClient.process_measurement">
+<span class="sig-prename descclassname"><span class="pre">network_gym_client.NorthBoundClient.</span></span><span class="sig-name descname"><span class="pre">process_measurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_json</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#network_gym_client.NorthBoundClient.process_measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process the measurement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reply_json</strong> (<em>json</em>) – the network stats measurement</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pd.DataFrame</strong> – the processed network stats measurement</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -378,8 +437,17 @@
             <ul>
 <li><a class="reference internal" href="#">NorthBound</a><ul>
 <li><a class="reference internal" href="#network-gym-client-northbound">network_gym_client.NorthBound</a><ul>
-<li><a class="reference internal" href="#methods">Methods</a></li>
-<li><a class="reference internal" href="#additional-methods">Additional Methods</a></li>
+<li><a class="reference internal" href="#network_gym_client.NorthBoundClient"><code class="docutils literal notranslate"><span class="pre">NorthBoundClient</span></code></a></li>
+<li><a class="reference internal" href="#methods">Methods</a><ul>
+<li><a class="reference internal" href="#network_gym_client.NorthBoundClient.connect"><code class="docutils literal notranslate"><span class="pre">connect()</span></code></a></li>
+<li><a class="reference internal" href="#network_gym_client.NorthBoundClient.send"><code class="docutils literal notranslate"><span class="pre">send()</span></code></a></li>
+<li><a class="reference internal" href="#network_gym_client.NorthBoundClient.recv"><code class="docutils literal notranslate"><span class="pre">recv()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#additional-methods">Additional Methods</a><ul>
+<li><a class="reference internal" href="#network_gym_client.NorthBoundClient.process_measurement"><code class="docutils literal notranslate"><span class="pre">process_measurement()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
