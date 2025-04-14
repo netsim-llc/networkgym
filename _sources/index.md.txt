@@ -57,7 +57,7 @@ For more comprehensive information about the key components of NetworkGym, pleas
 - NetworkGym is not designed to create a Digital Twin to simulate the physical world with high fidelity.
 
 ```{toctree}
-:hid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den:
+:hidden:
 :caption: Introduction
 
 content/motivation
