@@ -2,11 +2,7 @@
 title: Quickstart
 ---
 
-```{figure} network_gym_workflow.png
----
-width: 100%
----
-```
+# Installation
 
 Follow the **Installation** and **Start NetworkGym Client** section of [NetworkGym Client](https://github.com/netsim-llc/netgymclient) to initiate your simulations.
 
@@ -26,7 +22,7 @@ Follow the **Installation** and **Start NetworkGym Client** section of [NetworkG
 ```
 The provided python code below demonstrates how to interact with NetworkGym environments.
 
-### Initializing Environments
+# Initializing Environments
 
 Initializing environments in NetworkGym is straightforward and can be done via the `network_gym_client` package:
 
@@ -38,7 +34,7 @@ env = NetworkGymEnv(client_id, config_json)
 
 This will return an ``Env`` for users to interact with.
 
-### Interacting with the Environment
+# Interacting with the Environment
 
 The classic "agent-environment loop" is implemented using the following code:
 
@@ -70,7 +66,13 @@ for step in range(num_steps):
         obs, info = env.reset()
 ```
 
-### Explaining the code
+# Explaining the code
+
+```{figure} network_gym_workflow.png
+---
+width: 100%
+---
+```
 
 First, the configuration file is loaded using the `load_config_file` function by providing the selected environment name. Second, an environment is created using `NetworkGymEnv` class with the additional keywords `client_id` and `config_json`. A `client_id` is associated with a dedicated environment worker until the environment session ends. A client may use different `client_id` to launch parallel environments. After initializing the environment, we `reset` the environment to obtain the first observation of the environment.
 
