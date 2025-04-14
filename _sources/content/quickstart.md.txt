@@ -4,7 +4,7 @@ title: Quickstart
 # Quickstart
 ## Installation
 
-Follow the **Installation** and **Start NetworkGym Client** section of [NetworkGym Client](https://github.com/netsim-llc/netgymclient) to initiate your simulations.
+Follow the **Installation** and **Start NetworkGym Client** section of [NetworkGym Client](https://github.com/netsim-llc/networkgym) to initiate your simulations.
 
 ```{admonition} ▶️ Upon starting the Client, the following series of steps occur:
 1. The Client initiates the process by sending a JSON configuration file to the Server, prompting the launch of an ns-3 simulation.

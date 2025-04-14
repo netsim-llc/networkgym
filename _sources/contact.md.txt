@@ -5,7 +5,7 @@ title: Contact
 # Contact
 
 - [Email](mailto:support@netsimsolutions.com)
-- [Github](https://github.com/netsim-llc/netgymclient)
+- [Github](https://github.com/netsim-llc/networkgym)
 
 ```{figure} network_gym_qr_code.png
 ---
