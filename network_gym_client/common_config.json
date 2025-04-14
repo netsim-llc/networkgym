@@ -1,0 +1,10 @@
+{
+  "connect_via_server_ip_and_server_port": true,
+  "server_ip": "192.168.0.2",
+  "server_port": 8080,
+  "local_fowarded_port": 8080,
+  "enable_wandb": true,
+  "enable_terminal_redering": true,
+  "session_name": "test",
+  "session_key": "test"
+}

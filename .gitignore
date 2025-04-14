@@ -1,0 +1,8 @@
+/wandb
+/runs
+/models
+*.pyc
+/docs/_build
+*.rst
+/docs/sphinx_venv
+
