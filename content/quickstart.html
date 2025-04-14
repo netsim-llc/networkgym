@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="network_gym_client" href="../api/network_gym_client.html" /><link rel="prev" title="Overview" href="overview.html" />
 
     <!-- Generated with Sphinx 6.2.1 and Furo 2024.08.06 -->
-        <title>Installation - NetworkGym Docs</title>
+        <title>Quickstart - NetworkGym Docs</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=04c057b233f3c8d71940eee6080f658a04e2027d" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
@@ -182,7 +182,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -206,12 +206,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motivation.html">Motivation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#initializing-environments">Initializing Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#interacting-with-the-environment">Interacting with the Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#explaining-the-code">Explaining the code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#action-and-observation-spaces">Action and observation spaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#modifying-the-environment">Modifying the environment</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Quickstart</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API</span></p>
 <ul>
@@ -304,14 +299,16 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
+          <section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading">¶</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
 <p>Follow the <strong>Installation</strong> and <strong>Start NetworkGym Client</strong> section of <a class="reference external" href="https://github.com/netsim-llc/netgymclient">NetworkGym Client</a> to initiate your simulations.</p>
 <div class="admonition-upon-starting-the-client-the-following-series-of-steps-occur admonition">
 <p class="admonition-title">▶️ Upon starting the Client, the following series of steps occur:</p>
@@ -340,7 +337,7 @@
 <p>The provided python code below demonstrates how to interact with NetworkGym environments.</p>
 </section>
 <section id="initializing-environments">
-<h1>Initializing Environments<a class="headerlink" href="#initializing-environments" title="Permalink to this heading">¶</a></h1>
+<h2>Initializing Environments<a class="headerlink" href="#initializing-environments" title="Permalink to this heading">¶</a></h2>
 <p>Initializing environments in NetworkGym is straightforward and can be done via the <code class="docutils literal notranslate"><span class="pre">network_gym_client</span></code> package:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">network_gym_client</span> <span class="kn">import</span> <span class="n">Env</span> <span class="k">as</span> <span class="n">NetworkGymEnv</span>
 <span class="c1"># Create a network env using the client_id and configure file arguments.</span>
@@ -350,7 +347,7 @@
 <p>This will return an <code class="docutils literal notranslate"><span class="pre">Env</span></code> for users to interact with.</p>
 </section>
 <section id="interacting-with-the-environment">
-<h1>Interacting with the Environment<a class="headerlink" href="#interacting-with-the-environment" title="Permalink to this heading">¶</a></h1>
+<h2>Interacting with the Environment<a class="headerlink" href="#interacting-with-the-environment" title="Permalink to this heading">¶</a></h2>
 <p>The classic “agent-environment loop” is implemented using the following code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">network_gym_client</span> <span class="kn">import</span> <span class="n">load_config_file</span>
 <span class="kn">from</span> <span class="nn">network_gym_client</span> <span class="kn">import</span> <span class="n">Env</span> <span class="k">as</span> <span class="n">NetworkGymEnv</span>
@@ -381,7 +378,7 @@
 </div>
 </section>
 <section id="explaining-the-code">
-<h1>Explaining the code<a class="headerlink" href="#explaining-the-code" title="Permalink to this heading">¶</a></h1>
+<h2>Explaining the code<a class="headerlink" href="#explaining-the-code" title="Permalink to this heading">¶</a></h2>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/network_gym_workflow.png"><img alt="../_images/network_gym_workflow.png" src="../_images/network_gym_workflow.png" style="width: 100%;" /></a>
 </figure>
@@ -401,7 +398,7 @@ sequenceDiagram
 
 </div></section>
 <section id="action-and-observation-spaces">
-<h1>Action and observation spaces<a class="headerlink" href="#action-and-observation-spaces" title="Permalink to this heading">¶</a></h1>
+<h2>Action and observation spaces<a class="headerlink" href="#action-and-observation-spaces" title="Permalink to this heading">¶</a></h2>
 <p>Every environment specifies the format of valid actions and observations with the <code class="docutils literal notranslate"><span class="pre">env.action_space</span></code> and <code class="docutils literal notranslate"><span class="pre">env.observation_space</span></code> attributes. This helps in understanding the expected input and output of the environment, as all valid actions and observations should be contained within the respective space.</p>
 <p>In the provided example, we sampled random actions via <code class="docutils literal notranslate"><span class="pre">env.action_space.sample()</span></code> instead of using an agent policy, mapping observations to actions as users may prefer. Additionally, some of the NetworkGym environments have system default algorithms, which can be enabled by sending an “empty” action to the environment, as shown below:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># No action from the RL agent -&gt; the environment will use the system default policy</span>
@@ -421,7 +418,7 @@ Values can be shifted to {a, a+1, …, a+n-1} using an optional argument.</p></l
 </ul>
 </section>
 <section id="modifying-the-environment">
-<h1>Modifying the environment<a class="headerlink" href="#modifying-the-environment" title="Permalink to this heading">¶</a></h1>
+<h2>Modifying the environment<a class="headerlink" href="#modifying-the-environment" title="Permalink to this heading">¶</a></h2>
 <p>NetworkGym also supports the <a class="reference external" href="https://gymnasium.farama.org/content/basic_usage/#modifying-the-environment">Wrappers</a> provided by Gymnasium, enabling the customization of environments with additional functionalities. Some examples include:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">TimeLimit</span></code>: Issue a truncated signal if a maximum number of timesteps has been exceeded (or the base environment has issued a truncated signal).</p></li>
@@ -436,6 +433,7 @@ Values can be shifted to {a, a+1, …, a+n-1} using an optional argument.</p></l
 <span class="n">normal_obs_env</span> <span class="o">=</span> <span class="n">NormalizeObservation</span><span class="p">(</span><span class="n">env</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
 </section>
 
         </article>
@@ -484,8 +482,32 @@ Values can be shifted to {a, a+1, …, a+n-1} using an optional argument.</p></l
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Quickstart</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#initializing-environments">Initializing Environments</a></li>
+<li><a class="reference internal" href="#interacting-with-the-environment">Interacting with the Environment</a></li>
+<li><a class="reference internal" href="#explaining-the-code">Explaining the code</a></li>
+<li><a class="reference internal" href="#action-and-observation-spaces">Action and observation spaces</a></li>
+<li><a class="reference internal" href="#modifying-the-environment">Modifying the environment</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
