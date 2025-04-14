@@ -104,6 +104,6 @@ Gymnasium Tutorial <https://gymnasium.farama.org/tutorials/gymnasium_basics/>
 :hidden:
 :caption: Development
 
-Github <https://github.com/netsim-llc/netgymclient>
+Github <https://github.com/netsim-llc/networkgym>
 contact
 ```

@@ -61,7 +61,7 @@ html_theme_options = {
     "footer_icons": [
         {
             "name": "GitHub",
-            "url": "https://github.com/netsim-llc/netgymclient",
+            "url": "https://github.com/netsim-llc/networkgym",
             "html": "",
             "class": "fa-brands fa-solid fa-github fa-2x",
         },

@@ -21,7 +21,7 @@ This repository includes the network_gym_client components. The network_gym_serv
 1. clone this repository
    
 ```
-git clone https://github.com/netsim-llc/netgymclient.git
+git clone https://github.com/netsim-llc/networkgym.git
 ```
 
 3. install Python 3.11 on Ubuntu 24.04
@@ -88,7 +88,7 @@ python3 start_client.py
 ## 📁 File Structure
 
 ```
-📦 netgymclient
+📦 networkgym
 ┣ 📜 start_client.py
 ┗ 📂 network_gym_client
   ┣ 📜 adapter.py (➡️ WanDB)

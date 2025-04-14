@@ -1,10 +1,10 @@
 ---
 title: Quickstart
 ---
+# Quickstart
+## Installation
 
-# Installation
-
-Follow the **Installation** and **Start NetworkGym Client** section of [NetworkGym Client](https://github.com/netsim-llc/netgymclient) to initiate your simulations.
+Follow the **Installation** and **Start NetworkGym Client** section of [NetworkGym Client](https://github.com/netsim-llc/networkgym) to initiate your simulations.
 
 ```{admonition} ▶️ Upon starting the Client, the following series of steps occur:
 1. The Client initiates the process by sending a JSON configuration file to the Server, prompting the launch of an ns-3 simulation.
@@ -22,7 +22,7 @@ Follow the **Installation** and **Start NetworkGym Client** section of [NetworkG
 ```
 The provided python code below demonstrates how to interact with NetworkGym environments.
 
-# Initializing Environments
+## Initializing Environments
 
 Initializing environments in NetworkGym is straightforward and can be done via the `network_gym_client` package:
 
@@ -34,7 +34,7 @@ env = NetworkGymEnv(client_id, config_json)
 
 This will return an ``Env`` for users to interact with.
 
-# Interacting with the Environment
+## Interacting with the Environment
 
 The classic "agent-environment loop" is implemented using the following code:
 
@@ -66,7 +66,7 @@ for step in range(num_steps):
         obs, info = env.reset()
 ```
 
-# Explaining the code
+## Explaining the code
 
 ```{figure} network_gym_workflow.png
 ---
@@ -94,7 +94,7 @@ sequenceDiagram
 ```
 
 
-### Action and observation spaces
+## Action and observation spaces
 
 Every environment specifies the format of valid actions and observations with the `env.action_space` and `env.observation_space` attributes. This helps in understanding the expected input and output of the environment, as all valid actions and observations should be contained within the respective space.
 
@@ -116,7 +116,7 @@ Every environment should have the attributes `action_space` and `observation_spa
 - ``MultiDiscrete``: consists of a series of ``Discrete`` action spaces with a different number of actions in each element.
 
 
-### Modifying the environment
+## Modifying the environment
 
 NetworkGym also supports the [Wrappers](https://gymnasium.farama.org/content/basic_usage/#modifying-the-environment) provided by Gymnasium, enabling the customization of environments with additional functionalities. Some examples include:
 - `TimeLimit`: Issue a truncated signal if a maximum number of timesteps has been exceeded (or the base environment has issued a truncated signal).
