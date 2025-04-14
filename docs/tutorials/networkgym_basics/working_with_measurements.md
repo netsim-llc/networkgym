@@ -86,17 +86,17 @@ Click a source to view the available measurements. A measurement can be identifi
 | x_loc | x coordinate per user in meters. |
 | y_loc | y coordinate per user in meters. |
 
-🔽 base station (cell) measurement
+🔽 network measurement (the aggregated result for the entire network including all users)
 | Name | Description |
 | ---- | ---- |
-| ul::cell::rate | Uplink delivery rate (output traffic throughput) per slice as measured by each base station in Mbps.|
-| ul::cell::qos_rate | Uplink QoS delivery rate (output traffic throughput meeting QoS requirement) per slice as measured by each base station in Mbps. |
-| ul::cell::tx_rate | Uplink load (input traffic throughput) per slice as measured by each base station in Mbps. |
-| ul::cell::delay_violation | Uplink one-way delay violation percentage (%) as measured by each base station; delay bound (delay_bound_ms) can be configured in the JSON file. *(NOTE: Only for QoS use case)* |
-| dl::cell::rate | Downlink delivery rate (output traffic throughput) per slice as measured by each base station in Mbps.|
-| dl::cell::qos_rate | Downlink QoS delivery rate (output traffic throughput meeting QoS requirement) per slice as measured by each base station in Mbps. |
-| dl::cell::tx_rate | Downlink load (input traffic throughput) per slice as measured by each base station in Mbps. |
-| dl::cell::delay_violation | Downlink one-way delay violation percentage (%) as measured by each base station; delay bound (delay_bound_ms) can be configured in the JSON file. *(NOTE: Only for QoS use case)* |
+| ul::network::rate | Uplink delivery rate (output traffic throughput) per slice as measured by the entire network in Mbps.|
+| ul::network::qos_rate | Uplink QoS delivery rate (output traffic throughput meeting QoS requirement) per slice as measured by the entire network in Mbps. |
+| ul::network::tx_rate | Uplink load (input traffic throughput) per slice as measured by the entire network in Mbps. |
+| ul::network::delay_violation | Uplink one-way delay violation percentage (%) as measured by the entire network; delay bound (delay_bound_ms) can be configured in the JSON file. *(NOTE: Only for QoS use case)* |
+| dl::network::rate | Downlink delivery rate (output traffic throughput) per slice as measured by the entire network in Mbps.|
+| dl::network::qos_rate | Downlink QoS delivery rate (output traffic throughput meeting QoS requirement) per slice as measured by the entire network in Mbps. |
+| dl::network::tx_rate | Downlink load (input traffic throughput) per slice as measured by the entire network in Mbps. |
+| dl::network::delay_violation | Downlink one-way delay violation percentage (%) as measured by the entire network; delay bound (delay_bound_ms) can be configured in the JSON file. *(NOTE: Only for QoS use case)* |
 
 :::
 

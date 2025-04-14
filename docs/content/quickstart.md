@@ -2,28 +2,13 @@
 title: Quickstart
 ---
 
-# Quickstart
-
-## Accessing the NetworkGym Service via vLab
-```{figure} ../tutorials/network_gym_overview.png
----
-width: 40%
----
-```
-We provide access to NetworkGym Server/Environment through **vLab machines** [(Requst Access)](https://registration.intel-research.net/), facilitating collaboration with MLWiNS/RINGs universities. The NetworkGym Northbound Interface allows a NetworkGym Client to establish a connection with the NetworkGym Environment, either through the public internet or Intel's internal network. In case of any access issues, feel free to reach out to us at [netaigym@gmail.com](mailto:netaigym@gmail.com).
-
-Additionally, we plan to launch NetworkGym Sim-aaS via **Intel DevCloud**, making it available to all Intel developers.
-Meanwhile, we are actively collaborating with the research community to enhance NetworkGym Simulator with new use-cases and capabilities, such as 5G/O-RAN, distributed computing, RAN energy saving, predictive QoS, and more.
-
-## Basic Usage
-
 ```{figure} network_gym_workflow.png
 ---
 width: 100%
 ---
 ```
 
-Once you have gained access to vLab machines, you can begin by downloading the [Client](https://github.com/IntelLabs/networkgym) to initiate your simulations.
+Follow the **Installation** and **Start NetworkGym Client** section of [NetworkGym Client](https://github.com/netsim-llc/netgymclient) to initiate your simulations.
 
 ```{admonition} ▶️ Upon starting the Client, the following series of steps occur:
 1. The Client initiates the process by sending a JSON configuration file to the Server, prompting the launch of an ns-3 simulation.

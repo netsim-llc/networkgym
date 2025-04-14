@@ -11,7 +11,7 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 
 project = 'NetworkGym'
-copyright = '2023, Intel Labs'
+copyright = '2025, Network Simulation Solutions LLC'
 author = 'Menglei Zhang'
 
 # -- General configuration ---------------------------------------------------
@@ -61,13 +61,13 @@ html_theme_options = {
     "footer_icons": [
         {
             "name": "GitHub",
-            "url": "https://github.com/IntelLabs/networkgym",
+            "url": "https://github.com/netsim-llc/netgymclient",
             "html": "",
             "class": "fa-brands fa-solid fa-github fa-2x",
         },
         {
             "name": "Email",
-            "url": "mailto:netaigym@gmail.com",
+            "url": "mailto:support@netsimsolutions.com",
             "html": "",
             "class": "fa-solid fa-square-envelope fa-2x",
         },
