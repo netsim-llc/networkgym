@@ -77,8 +77,8 @@ python3 start_client.py
 ```
 
 - If "enable_terminal_redering" equals `true`, the network stats will be rendered in the terminal
+![gui](gui.png)
 - If "enable_wandb" equals `true`, you can visualize the output using the WanDB website.
-
 - run the example python3 script for celllular RAN slicing (https://netsim-llc.github.io/networkgym/environments/mx_network_slicing/cellular_network_slicing.html#cards-mx-cellular-slicing) 
 
 ```
