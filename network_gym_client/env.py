@@ -1,4 +1,4 @@
-#Copyright(C) 2023 Intel Corporation
+#Copyright(C) 2025 Network Simulation Solutions LLC
 #SPDX-License-Identifier: Apache-2.0
 #File : env.py
 
