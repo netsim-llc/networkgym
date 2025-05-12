@@ -52,7 +52,7 @@ git clone https://github.com/netsim-llc/networkgym.git
 4. obtain your username and PAT (personal access token)
 
 ```
-    - Go to ns3demo.netsimsolutions.com and create an account if you don't have one.
+    - Go to ns3.netsimsolutions.com and create an account if you don't have one.
     - Go to subscription and upgrade to "Pro". 
     - Click on Account Manager (top-right corner).
     - Select Personal Access Token (available for "Pro" users only).
@@ -62,7 +62,7 @@ git clone https://github.com/netsim-llc/networkgym.git
 5. update common_config_local.json
 
 ```
-  "server_ip": "51.81.203.232",
+  "server_ip": "51.81.221.50",
   "server_port": 8088,
      ...
   "session_name": [username],
