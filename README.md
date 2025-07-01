@@ -38,6 +38,7 @@ git clone https://github.com/netsim-llc/networkgym.git
 ```
     python3.11 -m venv myenv
     source myenv/bin/activate
+    cd ./networkgym
     pip3 install -r requirements.txt
 ```
 
